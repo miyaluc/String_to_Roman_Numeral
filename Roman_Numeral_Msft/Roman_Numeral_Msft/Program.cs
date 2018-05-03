@@ -39,8 +39,6 @@ namespace Roman_Numeral_Msft
         //given a string containing a Roman numeral, return the integer value
         static int RomanNumeralInterpreter(string romans)
         {
-            //capitalizing variable names because these are proper nouns
-
             //declaring empty variable to sum up the value of Roman numerals
             int sum = 0;
 
@@ -52,14 +50,8 @@ namespace Roman_Numeral_Msft
                 return 0;
             }
 
-            string[] array = new string[romans.Length];
-            for(int i = 0; i < romans.Length; i++)
-            {
-                array[i] = romans[i].ToString();
-            }
-
             //scan from right to left (starting at the end)
-            for (int i = array.Length-1; i >= 0; i--)
+            for (int i = romans.Length-1; i >= 0; i--)
             {
                 Console.WriteLine("The sum is {0}.", sum);
                 //converting current value to numeric value
